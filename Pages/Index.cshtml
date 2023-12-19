@@ -1,0 +1,104 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    var employee = Employee.GetAllRecords();
+}
+
+<ejs-grid id="Grid" dataSource="@employee" detailTemplate="#detailtemplate">
+    <e-grid-columns>
+        @*<e-grid-column headerText="Employee Image" textAlign="Center" width="250"></e-grid-column>
+        <e-grid-column headerText="Employee Details" width="300" textAlign="Left"></e-grid-column>*@
+        <e-grid-column field="EmployeeID" headerText="Employee ID" textAlign="Right" width="120"></e-grid-column>
+        <e-grid-column field="FirstName" headerText="Name" width="150"></e-grid-column>
+        <e-grid-column field="Title" headerText="Title" width="150"></e-grid-column>
+        <e-grid-column field="HireDate" headerText="Hire Date" format="yMd" width="130"></e-grid-column>
+        @*<e-grid-column field="Phone" headerText="Phone" width="120"></e-grid-column>
+        <e-grid-column field="Country" headerText="Country" width="150"></e-grid-column>*@
+    </e-grid-columns>
+</ejs-grid>
+
+<script id="detailtemplate" type="text/x-template">
+    <tr>
+        <td class="photo">
+            <img src="@Url.Content("~/Images/data-grid/${EmployeeID}.png")" alt="${EmployeeID}"/>
+        </td>
+        <td class="details">
+            <table class="cardtable" cellpadding="3" cellspacing="2">
+                <colgroup>
+                    <col/>
+                    <col/>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="cardheader">First Name</td>
+                        <td>${FirstName}</td>
+                    </tr>
+                    <tr>
+                        <td class="cardheader">Last Name</td>
+                        <td>${LastName} </td>
+                    </tr>
+                    <tr>
+                        <td class="cardheader">Title</td>
+                        <td>${Title}</td>
+                    </tr>
+                    <tr>
+                        <td class="cardheader">Birth Date</td>
+                        <td>${BirthDate.toLocaleDateString()}</td>
+                    </tr>
+                    <tr>
+                        <td class="cardheader">Hire Date</td>
+                        <td>${HireDate.toLocaleDateString()}</td>
+                    </tr>
+                    <tr>
+                        <td class="cardheader">Country</td>
+                        <td>${Country}</td>
+                    </tr>
+                     <tr>
+                        <td class="cardheader">Email ID</td>
+                        <td>${Email}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>    
+</script>
+
+<style>
+    .photo, .details {
+        border-color: #e0e0e0;
+        border-style: solid;
+        border-width: 1px 0px 0px 0px;
+    }
+
+    .photo{
+        text-align: center;
+    }
+
+    .photo img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
+    }
+    
+    .details {
+        padding-left: 18px;
+    }
+
+    .details > table {
+        width: 100%;
+    }
+
+    .cardtable col {
+        width: 50%;
+    }
+
+    .cardheader {
+        font-weight: 600;
+    }
+
+    td {
+        padding: 2px 20px 3px 4px;
+    }
+</style>
