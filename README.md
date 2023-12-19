@@ -1,4 +1,4 @@
-# Binding Expando and Dynamic Objects to the ASP.NET Core DataGrid Control
+# How to Customize the Rows of ASP.NET Core DataGrid Using Templates
 
 A quick-start project that helps you to customize rows in an ASP.NET Core Data Grid using templates. This project also contains simple code customizations using detail template to show additional information about a particular row by expanding or collapsing it.
 
