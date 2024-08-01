@@ -20,16 +20,20 @@ Demo: https://ej2.syncfusion.com/aspnetcore/Grid/DetailTemplate#/fluent
 
 ---
 
-## Project pre-requisites
-Make sure that you have compatible versions of
-* .NET SDK installed ([.NET ](https://dotnet.microsoft.com/en-us/download))
+## Project pre-requisites 
+Make sure you have compatible versions of the following IDE and framework installed on your machine before starting this project:
+
+* .NET SDK 6.0 ([.NET ](https://dotnet.microsoft.com/en-us/download))
 * Visual Studio 2022 ([Visual studio](https://visualstudio.microsoft.com/downloads/)) or later
 
-installed in your machine before starting to work on this project.
+---
+
+To learn more about the supported IDE and frameworks for our ASP.NET Core controls, please refer to the documentation below: 
+https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements
+
 
 ## How to run this application:
 
-To run this application, clone the `how-to-customize-the-rows-of-aspdotnet-core-datagrid-using-templates` repository and open it in Visual Studio. Install the necessary NuGet packages via the package manager, then build and run the project using the Visual Studio interface.
+To run this application, clone the `how-to-customize-the-rows-of-aspdotnet-core-datagrid-using-templates` repository and open it in Visual Studio.Install the necessary NuGet packages via the package manager, then build and run the project by pressing the F5 key.
 
-#### Note: If you encounter any package errors, clean the project and rebuild.
 
